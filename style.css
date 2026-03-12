@@ -1,36 +1,54 @@
 :root{
---main-color:#3498db;
---card-color:#ffffff;
---text-size:18px;
+--main:#3498db;
+--accent:#9b59b6;
+--card:#ffffff;
+--text:18px;
 }
 
 body{
-font-family:Arial;
 margin:0;
+font-family:Arial;
 background:#f4f4f4;
 }
 
-/* NAVBAR */
+
+.layout{
+display:grid;
+grid-template-areas:
+"header"
+"nav"
+"about"
+"overflow"
+"footer";
+
+gap:20px;
+padding:20px;
+}
+
+.header{grid-area:header}
+.nav{grid-area:nav}
+.about{grid-area:about}
+.overflow-demo{grid-area:overflow}
+.footer{grid-area:footer}
+
+
+.header{
+text-align:center;
+padding:40px;
+background:linear-gradient(120deg,var(--main),var(--accent));
+color:white;
+animation:fadein 2s ease;
+}
+
+
 .navbar{
 list-style:none;
-background:var(--main-color);
 padding:10px;
+background:#222;
+display:flex;
+justify-content:center;
+gap:30px;
 }
 
 .navbar li{
-display:inline-block;
-margin-right:20px;
-}
-
-.navbar a{
-color:white;
-text-decoration:none;
-}
-
-.navbar a:hover{
-text-decoration:underline;
-}
-
-.active a{
-font-weight:bold;
 }
